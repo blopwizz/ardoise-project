@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<link href='lib/fullcalendar.css' rel='stylesheet' />
+	<link href='lib/fullcalendar.print.css' rel='stylesheet' media='print' />
+	<script src='lib/moment.min.js'></script>
+	<script src='lib/jquery.min.js'></script>
+	<script src='lib/jquery-ui.min.js'></script>
+	<script src='lib/fullcalendar.js'></script>
+	<script src='init.js'></script>
+	<link href='style.css' rel='stylesheet'/>
+</head>
+<body>
+	<div id='wrap'>
+
+		<div id='external-events'>
+			<h4>Draggable Events</h4>
+			<div class='fc-event' url='https://docs.google.com/presentation/d/1fxsXJw-hBDWb71W44M1j9PNHUntxPmVP-bmITTfI7yg/embed'>Diapo A</div>
+			<div class='fc-event' url='https://docs.google.com/presentation/d/16u-BUE7Tt67efbies4aH88mJc8ONgUh_d_53DLCU-ec/embed'>Diapo B</div>
+			<div class='fc-event' url='https://docs.google.com/presentation/d/14vioN3k8Z21chC-dh3faiHNX1kBjX7xbw31JXmpLneM/embed'>Diapo C</div>
+			<p>
+				<input type='checkbox' id='drop-remove' />
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+		</div>
+
+		<div id='calendar'></div>
+
+		<div style='clear:both'></div>
+	</div>
+</body>
+</html>

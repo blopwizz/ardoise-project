@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<link rel='stylesheet' href='lib/jquery-ui.theme.css' />
+	<link href='lib/fullcalendar/fullcalendar.css' rel='stylesheet' />
+	<!-- 	<link href='lib/fullcalendar/fullcalendar.print.css' rel='stylesheet' media="print" /> -->
+	<script src='lib/moment.js'></script>
+	<script src='lib/jquery.min.js'></script>
+	<script src='lib/jquery-ui.min.js'></script>
+	<script src='lib/fullcalendar/fullcalendar.js'></script>
+	<script src='lib/fullcalendar/locale/fr.js'></script>
+
+	<script src='init.js'></script>
+	<link href='style.css' rel='stylesheet'/>
+</head>
+<body>
+	<div align="left" style="margin-left:120px">
+		<p>
+			Ardoise Kiosk Project / Prototype v3</br>
+			Stéphane GARTI - MEDEN AGAN
+		</p>
+		<br>
+		<p>
+			TO DO:
+			<ul>
+				<li>set up local database</li>
+				<li>set up display based on planning</li>
+				<li>delete diapo</li>
+				<li>create diapo</li>
+				<li>rename diapo</li>
+			</ul>
+		</p>
+		<br>
+		<p>
+			DONE:
+			<ul>
+				<li>calendar layout with fullcalendar</li>
+				<li>drag & drop</li>
+				<li>stretch to set time</li>
+				<li>diapo hyperlink to slide visualization</li>
+				<li>french language</li>
+				<li>delete event</li>
+				<li>edit button : link to google slide</li>
+
+			</ul>
+		</br>
+	</p>
+	<p>
+		Instructions: 
+		<br>
+		> Faire glisser les diapos sur le calendrier pour planifier l'affichage.
+	</br>
+	> Les boites peuvent êtres glissées et étirées pour déterminer l'heure et la durée d'affichage.
+	<br>
+	> Cliquer sur l'icône crayon pour éditer la présentation.
+</p>
+<br>
+<br>
+</div>
+<div id='wrap'>
+
+	<div id='external-events'>
+		<h4>DIAPOS</h4>
+		<div class="container-fc-event">
+			<div class="left">
+				<div class='fc-event' url='https://docs.google.com/presentation/d/1fxsXJw-hBDWb71W44M1j9PNHUntxPmVP-bmITTfI7yg/embed'>Diapo A</div>
+			</div>	
+			<div class="right">
+				<button class="edit-fc-event" onClick="window.open('https://docs.google.com/presentation/d/1fxsXJw-hBDWb71W44M1j9PNHUntxPmVP-bmITTfI7yg');">
+					<span class="edit-fc-event-icon">✎</span>
+				</button>
+			</div>
+		</div>
+		<div class="container-fc-event">
+			<div class="left">
+				<div class='fc-event' url='https://docs.google.com/presentation/d/16u-BUE7Tt67efbies4aH88mJc8ONgUh_d_53DLCU-ec/embed'>Diapo B</div>
+			</div>
+			<div class="right">
+				<button class="edit-fc-event" onClick="window.open('https://docs.google.com/presentation/d/16u-BUE7Tt67efbies4aH88mJc8ONgUh_d_53DLCU-ec');">
+					<span class="edit-fc-event-icon">✎</span>
+				</button>
+			</div>
+		</div>
+		<div class="container-fc-event">
+			<div class="left">
+				<div class='fc-event' url='https://docs.google.com/presentation/d/14vioN3k8Z21chC-dh3faiHNX1kBjX7xbw31JXmpLneM/embed'>Diapo C</div>
+			</div>
+			<div class="right">
+				<button class="edit-fc-event" onClick="window.open('https://docs.google.com/presentation/d/14vioN3k8Z21chC-dh3faiHNX1kBjX7xbw31JXmpLneM');">
+					<span class="edit-fc-event-icon">✎</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div id='calendar'></div>
+
+	<div style='clear:both'></div>
+</div>
+</body>
+</html>
