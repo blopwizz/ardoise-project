@@ -1,0 +1,33 @@
+<html> 
+<head>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+	<style type="text/css">
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
+		#iframe1 {
+			position:absolute;
+			left: 0px;
+			width: 100%;
+			top: 0px;
+			height: 100%;
+		}
+	</style>
+</head> 
+<body> 
+	<iframe id="iframe1" src="https://docs.google.com/presentation/d/1fxsXJw-hBDWb71W44M1j9PNHUntxPmVP-bmITTfI7yg/embed" frameborder="0"></iframe>
+	
+	<script src='lib/jquery.min.js'></script>
+	<script src="/socket.io.js"></script>
+	<script>
+		$(function() {
+			var socket = io();
+			socket.on('request: refresh display', function() {
+				location.reload();
+			});
+		});
+	</script>
+</body> 
+</html>
