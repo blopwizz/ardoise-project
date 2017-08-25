@@ -2,14 +2,17 @@
 <html>
 <head>
 	<meta charset='utf-8' />
-	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-	<link rel='stylesheet' href='lib/jquery-ui.theme.css' />
-	<link href='lib/fullcalendar/fullcalendar.css' rel='stylesheet' />
-	<link href='lib/fullcalendar/fullcalendar.print.css' rel='stylesheet' media="print" />
-	<link href='css/style.css' rel='stylesheet'/>
+	<link rel='icon' href='data:;base64,iVBORw0KGgo='>
+	<link rel='stylesheet' type='text/css' href='css/reset.css'>
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<link rel='stylesheet' type='text/css' href='lib/jquery-ui.theme.css' />
+	<link rel='stylesheet' type='text/css' href='lib/fullcalendar/fullcalendar.css'  />
+	<link rel='stylesheet' media='print'   href='lib/fullcalendar/fullcalendar.print.css'  />
+
 
 </head>
 <body>
+
 	<div align="left" style="margin-left:120px">
 		<p>
 			Ardoise Kiosk Project / Prototype v3</br>
@@ -43,17 +46,16 @@
 		</br>
 	</p>
 	<p>
-		Instructions: 
-		<br>
-		> Faire glisser les diapos sur le calendrier pour planifier l'affichage.
+		Instructions:
+		<br> > Faire glisser les diapos sur le calendrier pour planifier l'affichage.
 	</br>
 	> Les boites peuvent êtres glissées et étirées pour déterminer l'heure et la durée d'affichage.
-	<br>
-	> Cliquer sur l'icône crayon pour éditer la présentation.
+	<br> > Cliquer sur l'icône crayon pour éditer la présentation.
 </p>
 <br>
 <br>
 </div>
+
 <div id='wrap'>
 
 	<div id='external-events'>
@@ -61,7 +63,7 @@
 		<div class="container-fc-event">
 			<div class="left">
 				<div class='fc-event' url='https://docs.google.com/presentation/d/1fxsXJw-hBDWb71W44M1j9PNHUntxPmVP-bmITTfI7yg/embed'>Diapo A</div>
-			</div>	
+			</div>
 			<div class="right">
 				<button class="edit-fc-event" onClick="window.open('https://docs.google.com/presentation/d/1fxsXJw-hBDWb71W44M1j9PNHUntxPmVP-bmITTfI7yg');">
 					<span class="edit-fc-event-icon">✎</span>
@@ -90,18 +92,14 @@
 		</div>
 	</div>
 
-
-
 	<div id='calendar'></div>
-
-	<div id='save-btn-container'>
-		<button id="save-data">
-			Sauvegarder 
-		</button>
+	<div id='save-btn-container'> 
+	<button class='save-data'>Sauvegarder</button>
 	</div>
-
-	<div style='clear:both'></div>
 </div>
+
+
+
 <!-- load script at last in order to avoid assets loading obstacle -->
 <script src='lib/moment.js'></script>
 <script src='lib/jquery.min.js'></script>

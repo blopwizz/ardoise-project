@@ -1,6 +1,7 @@
 // action for button in edit page
 $(document).ready(function() {
-	$('#save-data').click(function(e) {
+	$('#save-btn-container > button').click(function(e) {
+		console.log('coucou');
 		e.preventDefault();
 		var socket = io();
 		var events_ = $('#calendar').fullCalendar('clientEvents');

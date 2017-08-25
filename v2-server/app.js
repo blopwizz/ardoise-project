@@ -71,9 +71,7 @@ var db = low('db.json', {
 io.on('connection', function(socket) {
     // listening for new updates coming from client-side
     socket.on('update: interface to database', function(events_) {
-    	var newState = {};
-    	newState.events = events_;
-    	db.setState(newState);
+    	db.set('events', events_).write();
     	io.emit('request: refresh display', {});
     });
 });
