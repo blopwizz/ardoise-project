@@ -1,8 +1,8 @@
 // client side
 $(document).ready(function() {
-	/* initialize the external events
-	-----------------------------------------------------------------*/
-
+	//-----------------------------------------------------------------
+	// EXTERNAL EVENTS INITIALIZATION
+	// create event when external event is dropped onto the calendar
 	$('#external-events .fc-event').each(function() {
 		// store data so the calendar knows to render an event upon drop
 		$(this).data('event', {
@@ -20,32 +20,22 @@ $(document).ready(function() {
 	});
 
 
-	/* initialize the calendar parameters
-	-----------------------------------------------------------------*/
-	$('#calendar').fullCalendar({
-		events: [
-		{
-			title: 'Exemple',
-			start: 	'2017-08-29T18:00:00+02:00',
-			description: 'test',
-			url_slide: 'https://docs.google.com/presentation/d/16u-BUE7Tt67efbies4aH88mJc8ONgUh_d_53DLCU-ec/embed'
-		}
-		],	
-		theme: true,
-		buttonText: {
-			prev: '<',
-			next: '>'
-		},
+	//-----------------------------------------------------------------
+	// INITIATE THE CALENDAR
+	// (see fullcalendar.io)
+	$('#calendar').fullCalendar({	
+		theme: true,        // enable custom theme
+		nowIndicator: true, // shows an indicator for current date and time 
+		editable: true,     // allows events to be stretched and moved
+		droppable: true,    // allows things to be dropped onto the calendar
+		timezone: 'local',  // local language
 		defaultView: 'agendaWeek',
-		header: {
-			left: 'prev,next, today',
-			center: 'title',
-			right: 'month,agendaWeek,agendaDay'
-		},
-		nowIndicator: true,
-		timezone: 'local',
-		editable: true,
-		droppable: true, // this allows things to be dropped onto the calendar
+
+		// buttons : navigation
+		buttonText: {prev: '<', next: '>'},
+		header: {left: 'prev,next,today', center: 'title', right: 'month,agendaWeek,agendaDay'},
+
+		// button : close event
 		eventRender: function(event, element, view) {
 			if (view.name == 'listDay') {
 				element.find(".fc-list-item-time").append("<span class='closeon'>X</span>");

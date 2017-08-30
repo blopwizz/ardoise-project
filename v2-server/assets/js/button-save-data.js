@@ -6,12 +6,13 @@ $(document).ready(function() {
 		var socket = io();
 		var now = moment();
 		var events_ = $('#calendar').fullCalendar('clientEvents');
-		var eventsJSON = [];
-		var currentEvents = [];
+		var eventsObject = [];
+		var currentEventsObject = [];
 		
 
 		for (var i=0; i<events_.length; i++) {
 			var newEntry = {};
+			var newEntryJSON;
 
 			var mStart = events_[i].start;
 			var mEnd;
@@ -22,23 +23,21 @@ $(document).ready(function() {
 			else {
 				mEnd = events_[i].end;
 			}
-
 			
 			newEntry.url_slide = events_[i].url_slide;
 			newEntry.title = events_[i].title;
 			newEntry.start = mStart.format();
 			newEntry.end = mEnd.format();
 			newEntry.id = events_[i].id;
-			eventsJSON.push(newEntry);
+			eventsObject.push(newEntry);
 
 			if (now.isBetween(mStart, mEnd)) {
-				currentEvents.push(newEntry);
+				currentEventsObject.push(newEntry);
 			}
 		}
 
-		console.log(currentEvents);
-
-		socket.emit('update: interface to database', eventsJSON);
+		console.log(currentEventsObject);
+		socket.emit('update: interface to database', eventsObject);
 	});
 
 });
