@@ -11,6 +11,16 @@ var io = require('socket.io')(http);                       // socket.io real-tim
 var low = require('lowdb');                                // local json database
 var fileAsync = require('lowdb/lib/storages/file-async'); // asynchronous file handler
 
+//----------------------------------------------------------------------------
+// DATABASE INITIALIZATION
+// With asynchronous file storage.
+// (for ease of use, read is synchronous)
+
+// link json file asynchronously
+var db = low('db.json', {
+	storage: fileAsync
+});
+
 //---------------------------------------------------------------------------------
 // EXPRESS CONFIGURATION & ROUTING
 
@@ -54,16 +64,6 @@ app.get('/socket.io-file-client.js', function(req, res, next) {
 http.listen(3000, function () {
 	console.log('Listening on port 3000 ...')
 })
-
-//----------------------------------------------------------------------------
-// DATABASE INITIALIZATION
-// With asynchronous file storage.
-// (for ease of use, read is synchronous)
-
-// link json file asynchronously
-var db = low('db.json', {
-	storage: fileAsync
-});
 
 //----------------------------------------------------------------------------
 // SOCKET IO SET UP 
