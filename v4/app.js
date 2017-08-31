@@ -22,7 +22,7 @@ app.get('/edit', function(req, res) {
 	// on loading 
 	io.on('connection', function(socket) {
 		var events_ = db.get('events').value();
-		socket.emit('update: database to edit.html', events_)
+		socket.emit('update: database to edit.html', events_);
 	});
 
 	res.sendFile(__dirname + '/edit.html');

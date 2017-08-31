@@ -1,5 +1,6 @@
 // client side
 $(document).ready(function() {
+	var socket = io();
 	//-----------------------------------------------------------------
 	// EXTERNAL EVENTS INITIALIZATION
 	// create event when external event is dropped onto the calendar
