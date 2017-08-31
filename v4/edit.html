@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='icon' href='data:;base64,iVBORw0KGgo='>
+	<link rel='stylesheet' type='text/css' href='css/reset.css'>
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<link rel='stylesheet' type='text/css' href='lib/jquery-ui.theme.css'>
+	<link rel='stylesheet' type='text/css' href='lib/fullcalendar/fullcalendar.css'>
+	<link rel='stylesheet' media='print'   href='lib/fullcalendar/fullcalendar.print.css'>
+
+
+</head>
+<body>
+	<div id="wrap">
+		<div id='external-events'>
+			<h4>DIAPOS</h4>
+			<div class="container-fc-event">
+				<div class="left">
+					<div class='fc-event'>Diapo A</div>
+				</div>
+				<div class="right">
+					<button class="edit-fc-event" onClick="window.open('https://docs.google.com/presentation/d/1fxsXJw-hBDWb71W44M1j9PNHUntxPmVP-bmITTfI7yg');">
+						<span class="edit-fc-event-icon">✎</span>
+					</button>
+				</div>
+			</div>
+			<div class="container-fc-event">
+				<div class="left">
+					<div class='fc-event'>Diapo B</div>
+				</div>
+				<div class="right">
+					<button class="edit-fc-event" onClick="window.open('https://docs.google.com/presentation/d/16u-BUE7Tt67efbies4aH88mJc8ONgUh_d_53DLCU-ec');">
+						<span class="edit-fc-event-icon">✎</span>
+					</button>
+				</div>
+			</div>
+			<div class="container-fc-event">
+				<div class="left">
+					<div class='fc-event'>Diapo C</div>
+				</div>
+				<div class="right">
+					<button class="edit-fc-event" onClick="window.open('https://docs.google.com/presentation/d/14vioN3k8Z21chC-dh3faiHNX1kBjX7xbw31JXmpLneM');">
+						<span class="edit-fc-event-icon">✎</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div id='calendar'></div>
+		
+		<div id='save-btn-container'> 
+			<button class='save-data'>Sauvegarder</button>
+		</div>
+	</div>
+
+	<!-- load script at last in order to avoid assets loading obstacle -->
+	<script src='lib/moment.js'></script>
+	<script src='lib/jquery.min.js'></script>
+	<script src='lib/jquery-ui.min.js'></script>
+	<script src='lib/fullcalendar/fullcalendar.js'></script>
+	<script src='lib/fullcalendar/locale/fr.js'></script>
+	<script src='/socket.io.js'></script>
+	<script src='js/init.js'></script>
+	<script src='js/edit.js'></script>
+</body>
+</html>

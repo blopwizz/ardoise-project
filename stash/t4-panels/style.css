@@ -1,0 +1,41 @@
+div {
+  border: solid 1px black;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.wrap {
+  position: relative;
+  padding: 0;
+}
+
+#panel-one {
+ position: absolute;
+ left: 0;
+ width: 50%;
+}
+
+#panel-two {
+  position: absolute;
+  left: 0;
+  width: 50%;
+}
+
+#panel-three { 
+  position: absolute;
+  right: 0; 
+  width: 50%;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .wrap {
+    padding: 0;
+  }
+
+  .panel#1,
+  .panel#2 {
+    position: static;
+    width: 50%;
+  }
+}
