@@ -7,7 +7,7 @@
 var express = require('express');                          // express server
 var io = require('socket.io')(http);                       // socket.io real-time event handler	
 var low = require('lowdb');                                // local json database
-var FileAsync = require('lowdb/lib/storages/file-async');
+var FileAsync = require('lowdb/storages/file-async');
 
 // create server
 var app = express();                                       

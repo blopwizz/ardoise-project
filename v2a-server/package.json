@@ -1,0 +1,20 @@
+{
+  "name": "v2a-server",
+  "version": "1.0.0",
+  "description": "Ardoise project",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sgar/ardoise-project.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "lowdb": "^0.16.2",
+    "socket.io": "^2.0.3"
+  }
+}
