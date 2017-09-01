@@ -2,6 +2,7 @@ $(document).ready(function() {
 	var socket = io();
 	socket.on('update display', function(data) {	
 		var activeEvent;
+		console.log(data);
 		var currentEvents = data[0];
 		var n = currentEvents.length;
 		var links = data[1]; 

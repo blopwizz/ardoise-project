@@ -12,13 +12,15 @@ app.use(express.static(__dirname + '/assets'));
 
 app.get('/', function (req, res) {
 	io.on('connection', function(socket) {
-		socket.emit('update', db.getState());
+		var currentEvents = db.get('currentEvents').value();
+		var links = db.get('links').value();
+		socket.emit('update display', [currentEvents, links]);
 	});
+	console.log(db.getState());
 	res.sendFile(__dirname + '/display.html');
 });
 
 app.get('/edit', function(req, res) {
-
 	// on loading 
 	io.on('connection', function(socket) {
 		var events_ = db.get('events').value();
